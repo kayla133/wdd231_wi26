@@ -1,4 +1,4 @@
-function setHeaderInfo(data) {
+export default function setHeaderInfo(data) {
   // insert data into disclaimer section
   const disclaimer = document.querySelector(".disclaimer > a");
   disclaimer.href = data.url;
