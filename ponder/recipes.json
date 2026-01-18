@@ -1,0 +1,55 @@
+{
+    "recipe_name": "Chocolate Chip Cookies",
+    "description": "A classic cookie recipe",
+    "ingredients": [
+        {
+            "name": "butter",
+            "amounts": {
+                "amount": "1",
+                "unit": "lb"
+            },
+            "status": "softened"
+        },
+        {
+            "name": "Brown Sugar",
+            "amounts": {
+                "amount": "1 1/2",
+                "unit": "C"
+            }
+        },
+        {
+            "name": "white sugar",
+            "amounts": {
+                "amount": "1",
+                "unit": "C"
+            }
+        },
+        {
+            "name": "eggs",
+            "amounts": {
+                "amount": "3"
+            }
+        },
+        {
+            "name": "vanilla",
+            "amounts": {
+                "amount": "2",
+                "unit": "tsp"
+            }
+        },
+        {
+            "name": "Baking soda",
+            "amounts": {
+                "amount": "1 1/2",
+                "unit": "tsp"
+            }
+        },
+        {
+            "name": "salt",
+            "amounts": {
+                "amount": "1/2",
+                "unit": "tsp"
+            }
+        }
+    ]
+}
