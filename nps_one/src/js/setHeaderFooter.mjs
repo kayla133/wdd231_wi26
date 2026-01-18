@@ -1,4 +1,6 @@
-export default function setHeaderInfo(data) {
+import { parkInfoTemplate, footerTemplate } from "./templates.mjs";
+
+function setHeaderInfo(data) {
   // insert data into disclaimer section
   const disclaimer = document.querySelector(".disclaimer > a");
   disclaimer.href = data.url;
@@ -12,24 +14,12 @@ export default function setHeaderInfo(data) {
     parkInfoTemplate(data);
 }
 
-function setParkIntro(data) {
-  const introEl = document.querySelector(".intro");
-  introEl.innerHTML = `<h1>${parkData.fullName}</h1>
-  <p>${parkData.description}</p>`;
-}
-
-function setParkInfoLinks(data) {
-  const infoEl = document.querySelector(".info");
-  const html = data.map(mediaCardTemplate);
-  infoEl.innerHTML = html.join("");
-}
-
 function setFooter(data) {
   const footerEl = document.querySelector("#park-footer");
-  footerEl.innerHTML = footerTemplate(data);
+  footerEl.insertAdjacentHTML("afterbegin", footerTemplate(data));
 }
 
-setHeaderInfo(parkData);
-setParkIntro(parkData);
-setParkInfoLinks(parkInfoLinks);
-setFooter(parkData);
+export default function setHeaderFooter(parkData) {
+  setHeaderInfo(parkData);
+  setFooter(parkData);
+}
