@@ -179,11 +179,6 @@ const park = {
   designation: "National Park"
 };
 
-export async function getParkData() {
-  // Instead of fetching, just return the local object
-  return park; 
-}
-
 const parkInfoLinks = [
   {
     name: "Current Conditions &#x203A;",
