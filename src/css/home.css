@@ -22,7 +22,6 @@ main > h1 {
   flex: 1;
 }
 
-
 @media screen and (min-width: 630px) {
   .info {
     flex-direction: row;
