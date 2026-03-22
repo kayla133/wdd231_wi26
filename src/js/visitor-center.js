@@ -69,6 +69,23 @@ function buildPage(data) {
   document
     .querySelector(".vc-gallery")
     .insertAdjacentHTML("beforeend", galleryHTML);
+
+  setupSingleOpenAccordions();
+}
+
+function setupSingleOpenAccordions() {
+  const detailsList = document.querySelectorAll(".vc-details-list details");
+  detailsList.forEach((detail) => {
+    detail.addEventListener("toggle", () => {
+      if (detail.open) {
+        detailsList.forEach((other) => {
+          if (other !== detail) {
+            other.open = false;
+          }
+        });
+      }
+    });
+  });
 }
 
 async function init() {
